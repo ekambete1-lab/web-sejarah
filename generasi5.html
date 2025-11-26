@@ -66,7 +66,34 @@
       color: #00eaff;
       animation: glowIn 1.4s ease;
     }
+header {
+      background: #0d152b;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0 20px rgba(0,255,255,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
 
+      animation: slideDown 1s ease forwards;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+
+
+
+
+
+
+
+
+    
     img {
       width: 100%;
       border-radius: 10px;
@@ -163,3 +190,4 @@
   </footer>
 </body>
 </html>
+
