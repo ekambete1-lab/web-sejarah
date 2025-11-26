@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sejarah Komputer - Home</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0a0f1f;
+      color: #e8e8e8;
+      overflow-x: hidden;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: #0d152b;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0 20px rgba(0,255,255,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      animation: slideDown 1s ease forwards;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    header h1 {
+      margin: 0;
+      color: #00eaff;
+      text-shadow: 0 0 10px #00eaff;
+      font-size: 1.7rem;
+    }
+
+    /* --- NAVBAR DESKTOP --- */
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #e8e8e8;
+      font-weight: 600;
+      transition: 0.3s;
+      padding: 6px 12px;
+      border-radius: 6px;
+    }
+
+    nav a:hover {
+      color: #00eaff;
+      transform: scale(1.15);
+      box-shadow: 0 0 10px #00eaff;
+    }
+
+    /* ===== HAMBURGER MENU ===== */
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 28px;
+      height: 3px;
+      background: #00eaff;
+      border-radius: 5px;
+    }
+
+    /* --- NAVBAR MOBILE --- */
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background: #0d152b;
+      padding: 10px;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .mobile-nav a {
+      color: #e8e8e8;
+      padding: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      text-decoration: none;
+    }
+
+    .mobile-nav a:hover {
+      color: #00eaff;
+      background: rgba(0,255,255,0.1);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      padding: 80px 40px;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: 1s ease;
+    }
+
+    .hero.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero h2 {
+      font-size: 2.7rem;
+      color: #00eaff;
+      text-shadow: 0 0 15px #00eaff;
+    }
+
+    /* ===== CARD ===== */
+    .card {
+      background: #111b33;
+      margin: 40px auto;
+      max-width: 900px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.15);
+      border: 1px solid rgba(0,255,255,0.2);
+      opacity: 0;
+      transform: translateY(40px);
+      transition: 1s ease;
+    }
+
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #bbb;
+      margin-top: 40px;
+      font-size: 0.9rem;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+      animation-delay: 1s;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* ==========================
+        RESPONSIVE BREAKPOINTS
+       ========================== */
+
+    /* --- Tablet --- */
+    @media (max-width: 900px) {
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+      header {
+        padding: 15px 25px;
+      }
+    }
+
+    /* --- Mobile Phone --- */
+    @media (max-width: 650px) {
+      nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      header h1 {
+        font-size: 1.4rem;
+      }
+
+      .hero {
+        padding: 60px 20px;
+      }
+
+      .hero h2 {
+        font-size: 1.9rem;
+      }
+
+      .card {
+        margin: 20px 15px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Sejarah Komputer</h1>
+
+    <!-- Tombol Hamburger -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Desktop Menu -->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="generasi1.html">Generasi 1</a>
+      <a href="generasi2.html">Generasi 2</a>
+      <a href="generasi3.html">Generasi 3</a>
+      <a href="generasi4.html">Generasi 4</a>
+      <a href="generasi5.html">Generasi 5</a>
+      <!-- <a href="tentang.html">Tentang</a> -->
+    </nav>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="generasi1.html">Generasi 1</a>
+    <a href="generasi2.html">Generasi 2</a>
+    <a href="generasi3.html">Generasi 3</a>
+    <a href="generasi4.html">Generasi 4</a>
+    <a href="generasi5.html">Generasi 5</a>
+    <!-- <a href="tentang.html">Tentang</a> -->
+  </div>
+
+  <section class="hero reveal">
+    <h2>Perjalanan Teknologi Komputer dari Masa ke Masa</h2>
+    <p>Menjelajahi perkembangan komputer dari generasi pertama hingga modern.</p>
+  </section>
+
+  <div class="card reveal">
+    <h2>Pengenalan Sejarah Komputer</h2>
+    <p>
+      Komputer telah mengalami perkembangan luar biasa sejak konsep awalnya pada abad ke-19. Mulai dari mesin mekanis ciptaan Charles Babbage,
+      komputer tabung vakum pada generasi pertama, hingga perangkat modern berbasis mikroprosesor yang kita gunakan sekarang.
+    </p>
+    <p>
+      Website ini menyediakan penjelasan lengkap setiap generasi komputer.
+    </p>
+  </div>
+
+  <footer>
+    &copy; 2025 - Website Sejarah Komputer Futuristik
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+    }
+
+    const reveals = document.querySelectorAll(".reveal");
+
+    function checkAnimation() {
+      reveals.forEach((el) => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) el.classList.add("visible");
+      });
+    }
+
+    window.addEventListener("scroll", checkAnimation);
+    window.onload = checkAnimation;
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sejarah Komputer - Generasi 3</title>
+
+  <style>
+    /* --- GLOBAL STYLE --- */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0a0f1f;
+      color: #e8e8e8;
+      overflow-x: hidden;
+    }
+
+    /* --- HEADER DAN NAVIGATION --- */
+    header {
+      background: #0d152b;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0 20px rgba(0,255,255,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #00eaff;
+      text-shadow: 0 0 10px #00eaff;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #e8e8e8;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #00eaff;
+      text-shadow: 0 0 10px #00eaff;
+    }
+
+    /* --- HEADER & ANIMASI SAMA SEPERTI GENERASI 1 --- */
+    header {
+      background: #0d152b;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0 20px rgba(0,255,255,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      animation: slideDown 1s ease forwards;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    header h1 {
+      margin: 0;
+      color: #00eaff;
+      text-shadow: 0 0 10px #00eaff;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #e8e8e8;
+      font-weight: 600;
+      transition: 0.3s;
+      padding: 6px 12px;
+      border-radius: 6px;
+    }
+
+    nav a:hover {
+      color: #00eaff;
+      transform: scale(1.1);
+      box-shadow: 0 0 10px #00eaff;
+    }
+
+
+
+
+
+
+
+
+
+
+    /* --- HAMBURGER MENU HP --- */
+    .hamburger {
+      display: none;
+      font-size: 26px;
+      cursor: pointer;
+      color: #00eaff;
+      transition: 0.3s ease;
+    }
+
+    /* --- MOBILE NAV --- (SAMA 100% DENGAN GENERASI 2) */
+    .mobile-nav {
+      display: flex;
+      flex-direction: column;
+      background: #0d152b;
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.5s ease, opacity 0.5s ease;
+    }
+
+    .mobile-nav.show {
+      max-height: 350px;
+      opacity: 1;
+    }
+
+    .mobile-nav a {
+      padding: 12px 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      color: #e8e8e8;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .mobile-nav a:hover {
+      color: #00eaff;
+      text-shadow: 0 0 10px #00eaff;
+    }
+
+    /* --- CONTENT --- */
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #111b33;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.15);
+      border: 1px solid rgba(0,255,255,0.15);
+
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 1s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h2 {
+      color: #00eaff;
+      text-shadow: 0 0 10px #00eaff;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+      box-shadow: 0 0 15px rgba(0,255,255,0.2);
+      animation: fadeIn 1.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #bbb;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 768px) {
+      nav { display: none; }
+      .hamburger { display: block; }
+      header { padding: 15px 20px; }
+      .content { margin: 20px; padding: 20px; }
+    }
+  </style>
+
+  <!-- SCRIPT ANIMASI MENU (COPY PERSIS DARI GENERASI 2) -->
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("mobileNav");
+
+      if (nav.classList.contains("show")) {
+        nav.classList.remove("show");
+      } else {
+        nav.classList.add("show");
+      }
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Sejarah Komputer</h1>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="generasi1.html">Generasi 1</a>
+      <a href="generasi2.html">Generasi 2</a>
+      <a href="generasi3.html">Generasi 3</a>
+      <a href="generasi4.html">Generasi 4</a>
+      <a href="generasi5.html">Generasi 5</a>
+      <!-- <a href="tentang.html">Tentang</a> -->
+    </nav>
+
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <!-- MOBILE NAV / SAMA DENGAN GENERASI 2 -->
+  <div id="mobileNav" class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="generasi1.html">Generasi 1</a>
+    <a href="generasi2.html">Generasi 2</a>
+    <a href="generasi3.html">Generasi 3</a>
+    <a href="generasi4.html">Generasi 4</a>
+    <a href="generasi5.html">Generasi 5</a>
+    <!-- <a href="tentang.html">Tentang</a> -->
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+    <h2>Komputer Generasi Ketiga (1964–1971)</h2>
+
+    <p>
+      Komputer generasi ketiga mulai menggunakan <b>sirkuit terpadu (Integrated Circuit / IC)</b>.
+      Inovasi ini membuat komputer menjadi jauh lebih kecil, lebih cepat, dan lebih efisien dibanding generasi sebelumnya.
+    </p>
+
+    <img src="assets/Generasi3.jpeg" alt="Komputer PDP-11" />
+
+    <h3>Ciri-ciri Komputer Generasi Ketiga</h3>
+    <ul>
+      <li>Menggunakan <b>IC</b> sebagai komponen utama.</li>
+      <li>Kinerja lebih cepat dan lebih stabil.</li>
+      <li>Mampu menjalankan banyak tugas secara bersamaan (multitasking).</li>
+      <li>Penggunaan energi lebih hemat.</li>
+      <li>Tampilan lebih modern dan ukuran lebih kecil.</li>
+    </ul>
+
+    <h3>Contoh Komputer Generasi Ketiga</h3>
+    <ul>
+      <li>IBM System/360</li>
+      <li>PDP-11</li>
+      <li>Honeywell 6000 Series</li>
+    </ul>
+
+   <video 
+  width="100%" 
+  height="400" 
+  controls 
+  style="border-radius: 12px; box-shadow: 0 0 15px rgba(0,255,255,0.25);">
+  <source src="assets/Generasi3.mp4" type="video/mp4">
+</video>
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 - Sejarah Komputer Generasi 3
+  </footer>
+
+</body>
+</html>

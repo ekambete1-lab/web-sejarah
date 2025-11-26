@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sejarah Komputer - Generasi 1</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0a0f1f;
+      color: #e8e8e8;
+      overflow-x: hidden;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: #0d152b;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0 20px rgba(0,255,255,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      animation: slideDown 1s ease forwards;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    header h1 {
+      margin: 0;
+      color: #00eaff;
+      text-shadow: 0 0 10px #00eaff;
+    }
+
+    /* ===== NAV ===== */
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #e8e8e8;
+      font-weight: 600;
+      transition: 0.3s;
+      padding: 6px 12px;
+      border-radius: 6px;
+    }
+
+    nav a:hover {
+      color: #00eaff;
+      transform: scale(1.1);
+      box-shadow: 0 0 10px #00eaff;
+    }
+
+    /* ===== HAMBURGER ===== */
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .hamburger span {
+      width: 28px;
+      height: 3px;
+      background: #00eaff;
+      display: block;
+      border-radius: 4px;
+    }
+
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background: #0d152b;
+      padding: 12px;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .mobile-nav a {
+      color: #e8e8e8;
+      padding: 12px;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .mobile-nav a:hover {
+      color: #00eaff;
+      background: rgba(0,255,255,0.1);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* ===== CONTENT ===== */
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #111b33;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.15);
+      border: 1px solid rgba(0,255,255,0.15);
+
+      opacity: 0;
+      transform: translateY(40px);
+      transition: 1s ease;
+    }
+
+    .content.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2, h3 {
+      color: #00eaff;
+      text-shadow: 0 0 10px #00eaff;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+      box-shadow: 0 0 15px rgba(0,255,255,0.2);
+      transition: 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.03);
+    }
+
+    video {
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,255,255,0.25);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #bbb;
+      margin-top: 40px;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+      animation-delay: 0.5s;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 650px) {
+      header {
+        padding: 15px 20px;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .content {
+        margin: 20px 15px;
+        padding: 20px;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+      }
+
+      img {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Sejarah Komputer</h1>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="generasi1.html">Generasi 1</a>
+      <a href="generasi2.html">Generasi 2</a>
+      <a href="generasi3.html">Generasi 3</a>
+      <a href="generasi4.html">Generasi 4</a>
+      <a href="generasi5.html">Generasi 5</a>
+      <!-- <a href="tentang.html">Tentang</a> -->
+    </nav>
+  </header>
+
+  <div id="mobileMenu" class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="generasi1.html">Generasi 1</a>
+    <a href="generasi2.html">Generasi 2</a>
+    <a href="generasi3.html">Generasi 3</a>
+    <a href="generasi4.html">Generasi 4</a>
+    <a href="generasi5.html">Generasi 5</a>
+    <!-- <a href="tentang.html">Tentang</a> -->
+  </div>
+
+  <div class="content reveal">
+    <h2>Komputer Generasi Pertama (1940–1956)</h2>
+    <p>
+      Komputer generasi pertama menggunakan <b>tabung vakum</b> sebagai komponen utama.
+      Ukurannya sangat besar, panas, dan membutuhkan listrik yang besar.
+      Namun, teknologi ini menjadi dasar perkembangan komputer berikutnya.
+    </p>
+
+    <img src="assets/Generasi1.jpeg" alt="Komputer ENIAC" />
+
+
+    <h3>Ciri-ciri</h3>
+    <ul>
+      <li>Menggunakan tabung vakum.</li>
+      <li>Ukuran sangat besar.</li>
+      <li>Mudah panas dan sering rusak.</li>
+      <li>Bahasa pemrograman: bahasa mesin.</li>
+      <li>Konsumsi daya sangat besar.</li>
+    </ul>
+
+    <h3>Contoh Komputer</h3>
+    <ul>
+      <li>ENIAC</li>
+      <li>EDVAC</li>
+      <li>UNIVAC I</li>
+    </ul>
+
+    <h3>Video</h3>
+
+<video 
+  width="100%" 
+  height="400" 
+  controls 
+  style="border-radius: 12px; box-shadow: 0 0 15px rgba(0,255,255,0.25);">
+  <source src="assets/Generasi1.1.mp4" type="video/mp4">
+</video>
+  </div>
+
+  <footer>
+    &copy; 2025 - Sejarah Komputer Generasi 1
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+    }
+
+    const reveals = document.querySelectorAll(".reveal");
+
+    function checkAnimation() {
+      reveals.forEach((el) => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) el.classList.add("visible");
+      });
+    }
+
+    window.addEventListener("scroll", checkAnimation);
+    window.onload = checkAnimation;
+  </script>
+
+</body>
+</html>

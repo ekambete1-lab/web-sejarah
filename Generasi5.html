@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sejarah Komputer - Generasi 5</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0a0f1f;
+      color: #e8e8e8;
+    }
+
+    /* HEADER */
+    header {
+      background: #0d152b;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0 20px rgba(0,255,255,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header h1 {
+      margin: 0;
+      color: #00eaff;
+    }
+    nav a {
+      text-decoration: none;
+      color: #e8e8e8;
+      margin-left: 20px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #00eaff;
+      text-shadow: 0 0 10px #00eaff;
+    }
+
+    /* CONTENT CARD */
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #111b33;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.15);
+      border: 1px solid rgba(0,255,255,0.15);
+      animation: fadeIn 1.2s ease;
+    }
+
+    /* ANIMASI */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes glowIn {
+      from { opacity: 0; text-shadow: none; }
+      to { opacity: 1; text-shadow: 0 0 12px #00eaff; }
+    }
+
+    h2 {
+      color: #00eaff;
+      animation: glowIn 1.4s ease;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+      box-shadow: 0 0 15px rgba(0,255,255,0.2);
+      animation: fadeIn 1.4s ease;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #bbb;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width: 700px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav {
+        margin-top: 10px;
+      }
+      nav a {
+        margin: 10px;
+        display: inline-block;
+      }
+      .content {
+        padding: 20px;
+        margin: 20px;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+  <header>
+    <h1>Sejarah Komputer</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="generasi1.html">Generasi 1</a>
+      <a href="generasi2.html">Generasi 2</a>
+      <a href="generasi3.html">Generasi 3</a>
+      <a href="generasi4.html">Generasi 4</a>
+      <a href="generasi5.html">Generasi 5</a>
+      <!-- <a href="tentang.html">Tentang</a> -->
+    </nav>
+  </header>
+
+  <div class="content">
+    <h2>Komputer Generasi Kelima (1985 - Sekarang)</h2>
+    <p>
+      Komputer generasi kelima dikenal sebagai era **kecerdasan buatan (Artificial Intelligence)**.
+      Sistem komputasi modern tidak hanya bekerja lebih cepat, tetapi juga memiliki kemampuan
+      untuk belajar, mengenali pola, memahami bahasa manusia, serta membuat prediksi.
+    </p>
+
+    <img src="assets/Generasi5.jpeg" alt="Komputer DELL" />
+
+    <h3>Ciri-ciri Komputer Generasi Kelima</h3>
+    <ul>
+      <li>Penggunaan **Artificial Intelligence (AI)**.</li>
+      <li>Memiliki kemampuan **machine learning** dan **deep learning**.</li>
+      <li>Menggunakan teknologi **parallel processing**.</li>
+      <li>Kemampuan mengenali suara, wajah, dan bahasa.</li>
+      <li>Ukuran semakin kecil, efisien, dan hemat daya.</li>
+      <li>Pemanfaatan **quantum computing** (tahap pengembangan).</li>
+    </ul>
+
+    <h3>Contoh Komputer Generasi Kelima</h3>
+    <ul>
+      <li>Superkomputer AI (IBM Watson, DeepMind AlphaGo)</li>
+      <li>Smartphone modern</li>
+      <li>Quantum Computer (IBM Q System One)</li>
+      <li>Asisten digital (Google Assistant, Siri, Alexa)</li>
+    </ul>
+
+   <video 
+  width="100%" 
+  height="400" 
+  controls 
+  style="border-radius: 12px; box-shadow: 0 0 15px rgba(0,255,255,0.25);">
+  <source src="assets/Generasi5.mp4" type="video/mp4">
+</video>
+  </div>
+
+
+  <footer>
+    &copy; 2025 - Sejarah Komputer Generasi 5
+  </footer>
+</body>
+</html>
